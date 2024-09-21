@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container1 {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    width: 300px;
+    background-color: #111;
+    z-index: 99999;
+    overflow-y: auto;
+}
+
+.social-media {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin,
+.fa-github,
+.fa-instagram {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50%;
+    color: white;
+    background-color: slategray;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-instagram:hover {
+    background-color: white;
+    color: black !important;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.menu ul {
+    padding-left: 0;
+}
+
+.menu ul li {
+    list-style: none;
+    margin: 8px;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 16px;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.menu ul li a:hover,
+.active {
+    background-color: slategray;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.content {
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    height: auto;
+    overflow-y: auto;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    justify-content: center;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    padding: 0 15px;
+
+}
+
+.typed {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ff6347;
+
+    display: inline-block;
+}
+
+.hero .pronouns {
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    padding: 0 15px;
+}
+
+.hero h2,
+.hero p {
+    color: white;
+}
+
+.cursor {
+    font-weight: bold;
+    color: #ff6347;
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.about,
+.skills,
+.resume,
+.portfolio,
+.contact,
+.services {
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.about h2,
+.skills h2,
+.resume h2,
+.portfolio h2,
+.contact h2,
+.services h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 5%;
+    height: 4px;
+    background-color: #ff6347;
+    margin: 10px 0;
+}
+
+.about p,
+.skills p,
+.resume p,
+.portfolio p {
+    font-size: 1rem;
+    line-height: 1.5;
+
+    text-align: justify;
+    color: #333;
+}
+
+
+.skills .progress {
+    height: 30px;
+    display: flex;
+
+}
+
+.resume .border-left {
+    border-left: 3px solid #ff6347;
+    padding-left: 10px;
+    position: relative;
+    margin-left: 10px;
+
+
+}
+
+.portfolio .card {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.portfolio .card-body {
+    display: none;
+
+}
+
+.portfolio .card-body .card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.portfolio .card:hover .card-body {
+
+    display: block;
+    background-color: rgb(112, 128, 144, 0.8);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.btn-color {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+}
+
+.btn-color:hover {
+    background-color: white;
+    color: #ff6347;
+    border: 1px solid #ff6347;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .role-title {
+        font-size: 1.5rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
