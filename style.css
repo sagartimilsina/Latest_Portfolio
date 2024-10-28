@@ -164,7 +164,7 @@
     padding: 30px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .sidebar {
         width: 100%;
         height: auto;
@@ -175,7 +175,7 @@
         margin-left: 0;
         width: 100%;
     }
-}
+} */
 
 .about h2,
 .skills h2,
@@ -286,4 +286,140 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.services-item .card-body {
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: 2px;
+}
+
+/* Optional: Add Webkit-specific styles for scrollbar width and color */
+.services-item .card-body::-webkit-scrollbar {
+    width: 3px;
+    /* Adjust scrollbar width */
+}
+
+.services-item .card-body::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    /* Adjust color as needed */
+    border-radius: 4px;
+    /* Optional: Rounded edges */
+}
+/* Up Arrow Button Styles */
+#upArrowBtn {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 99; /* Stay on top */
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #333; /* Background color */
+    color:#fff; /* Text color */
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;	
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ccc;
+}
+#upArrowBtn:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+
+/* Responsive CSS */
+@media screen and (max-width: 1200px) {
+    .content {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+
+    .sidebar {
+        top: 0 !important;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        transition: left 0.5s ease;
+        margin-left: 0px !important;
+        z-index: 1000;
+        overflow-y: auto;
+
+    }
+
+    .hamburger {
+        display: block !important;
+        margin: 15px;
+        font-size: 1.5rem;
+        float: right;
+        color: #000;
+        cursor: pointer;
+        z-index: 1001;
+        position: fixed;
+    }
+
+    .sidebar.active {
+        left: 0 !important;
+        top: 0 !important;
+        width: 300px;
+        height: 100%;
+        background-color: #333;
+        color: #fff;
+        transition: left 0.5s ease;
+    }
+
+    .show-bars {
+        display: inline-block;
+        border-radius: 10px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+
+    .show-times {
+        display: none;
+        color: #fff;
+    }
+
+    .sidebar.active~.hamburger .show-bars {
+        display: none;
+        /* Hide bars icon when sidebar is active */
+    }
+
+    .sidebar.active~.hamburger .show-times {
+        display: inline-block;
+        color: #fff !important;
+
+        /* Show times icon when sidebar is active */
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .hamburger {
+        display: none !important;
+    }
+
+    .content {
+        margin-left: 300px !important;
+    }
+
+    .sidebar {
+        display: block !important;
+
+    }
+
 }

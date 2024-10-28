@@ -14,11 +14,18 @@
 
 </head>
 
+
 <body>
     <main>
-        <section class="container1">
+
+        <section class="container1 position-relative">
+            <div class="hamburger ">
+
+                <i class="fa fa-bars fa-1x show-bars" aria-hidden="true" onclick="toggleSidebar()"></i>
+                <i class="fa fa-times fa-1x show-times" aria-hidden="true" onclick="toggleSidebar()"></i>
+            </div>
             <div class="d-flex">
-                <div class="col-2 bg-secondary sidebar">
+                <div class="col-2 bg-secondary sidebar " id="sidebar">
                     <div class="d-block m-auto border-0 mt-4 text-center">
                         <img src="photo.jpeg" alt="Profile Photo" class="img-fluid rounded-circle shadow" width="130">
                         <h4 class="text-white m-3 text-uppercase">Sagar Timilsina</h4>
@@ -77,31 +84,6 @@
                             </li>
                         </ul>
 
-                        <script>
-                            document.addEventListener('DOMContentLoaded', () => {
-                                const sections = document.querySelectorAll('section');
-                                const navLinks = document.querySelectorAll('.nav-link');
-
-                                const observer = new IntersectionObserver((entries) => {
-                                    entries.forEach(entry => {
-                                        const id = entry.target.getAttribute('id');
-                                        const navLink = document.querySelector(`a[href="#${id}"]`);
-
-                                        if (entry.isIntersecting) {
-                                            navLinks.forEach(link => link.classList.remove('active'));
-                                            navLink.classList.add('active');
-                                        }
-                                    });
-                                }, {
-                                    threshold: 0.6 // Adjust threshold as needed
-                                });
-
-                                sections.forEach(section => {
-                                    observer.observe(section);
-                                });
-                            });
-                        </script>
-
                     </div>
                 </div>
                 <div class="col-10 content">
@@ -109,7 +91,7 @@
                         <div id="home" class="hero">
                             <h2 class="text-start">Sagar Timilsina</h2>
                             <div class="container" data-aos="fade-up" data-aos-delay="100">
-                                <p>
+                                <p class="text-start">
                                     <span class="pronouns">I'm</span>
                                     <span class="typed"></span>
                                     <span class="cursor">|</span>
@@ -122,7 +104,8 @@
                             <h2 class="text-dark">About Me</h2>
                             <div class="line"></div>
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elitcnejngdvendgnvlore Lorem ipsum,
+                            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elitcnejngdvendgnvlore Lorem ipsum,
                                 dolor
                                 sit amet consectetur adipisicing elit. Dignissimos nemo quo officia, ducimus eius veniam
                                 dolor expedita sit sint fugiat provident error cumque. Laudantium, saepe corporis! Nam
@@ -130,62 +113,49 @@
                                 perspiciatis numquam voluptatem esse. A vel nam voluptas temporibus, placeat ducimus,
                                 consequuntur itaque laboriosam eum nemo harum debitis ullam magnam deserunt iure.</p>
 
-                            <div class="row mt-5">
-                                <div class="col-5">
-                                    <img src="photo.jpeg" alt="" class="img-fluid" width="auto" height="500px">
+                            <div class="row mt-5 ">
+                                <div class=" col-lg-6 col-md-12 text-center mb-3">
+                                    <img src="photo.jpeg" alt="Profile Picture" class="img-fluid rounded"
+                                        style="max-height: 500px; width: auto;">
                                 </div>
 
-                                <div class="col-7">
+                                <div class="col-lg-6 col-md-12 mb-3">
                                     <h3 class="text-dark">Title</h3>
                                     <p class="text-dark mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Ratione
-                                        quos
-                                        officiis
-                                        necessitatibus
-                                        doloremque, voluptas voluptatem praesentium. Lorem ipsum dolor sit amet
-                                        consectetu
-                                    </p>
-                                    <div class="d-flex">
-                                        <div class="d-flex flex-column col-6">
-                                            <h6 class="text-dark mb-3  "><i class="fa fa-chevron-right me-3 icon-size"
-                                                    aria-hidden="true"></i>Birthday : <span
-                                                    class="text-muted">2001-02-18</span> </h6>
-                                            <h6 class="text-dark mb-3 "><i class="fa fa-chevron-right me-3 icon-size"
-                                                    aria-hidden="true"></i>Website : <span
-                                                    class="text-muted">www.sagartimilsina.com.np</span>
-                                            </h6>
-                                            <h6 class="text-dark mb-3 "><i class="fa fa-chevron-right me-3 icon-size"
-                                                    aria-hidden="true"></i>Phone : <span class="text-muted">+977
-                                                    9819113548</span>
-                                            </h6>
-                                            <h6 class="text-dark mb-3 "><i class="fa fa-chevron-right me-3 icon-size"
-                                                    aria-hidden="true"></i>Address : <span class="text-muted">Pokhara,
-                                                    Kaski, Nepal</span>
-                                            </h6>
+                                        Ratione quos officiis necessitatibus doloremque, voluptas voluptatem
+                                        praesentium. Lorem ipsum dolor sit amet consectetu.</p>
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-sm-12 col-lg-6 d-flex flex-column mb-3 ">
+                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
+                                                    aria-hidden="true"></i>Birthday: <span
+                                                    class="text-muted">2001-02-18</span></h6>
+                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
+                                                    aria-hidden="true"></i>Website: <span
+                                                    class="text-muted">www.sagartimilsina.com.np</span></h6>
+                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
+                                                    aria-hidden="true"></i>Phone: <span class="text-muted">+977
+                                                    9819113548</span></h6>
+                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
+                                                    aria-hidden="true"></i>Address: <span class="text-muted">Pokhara,
+                                                    Kaski, Nepal</span></h6>
                                         </div>
-                                        <div class="d-flex flex-column col-6">
-                                            <h6 class="text-dark mb-3 "><i class="fa fa-chevron-right me-3 icon-size"
-                                                    aria-hidden="true"></i>
-                                                Degree : <span class="text-muted">Bachelor</span></h6>
-                                            <h6 class="text-dark mb-3 "><i class="fa fa-chevron-right me-3 icon-size"
-                                                    aria-hidden="true"></i>Email : <span
-                                                    class="text-muted">timilsinasagar04@gmail.com</span>
-                                            </h6>
-                                            <h6 class="text-dark mb-3 "><i class="fa fa-chevron-right me-3 icon-size"
-                                                    aria-hidden="true"></i>Freelance : <span
-                                                    class="text-muted">Available</span>
-                                            </h6>
+                                        <div class="col-12 col-md-6 col-sm-12 col-lg-6 d-flex flex-column mb-3">
+                                            <h6 class="text-dark mb-2"><i class="fa fa-chevron-right me-2 icon-size"
+                                                    aria-hidden="true"></i>Degree: <span
+                                                    class="text-muted">Bachelor</span></h6>
+                                            <h6 class="text-dark mb-2"><i class="fa fa-chevron-right me-2 icon-size"
+                                                    aria-hidden="true"></i>Email: <span
+                                                    class="text-muted">timilsinasagar04@gmail.com</span></h6>
+                                            <h6 class="text-dark mb-2"><i class="fa fa-chevron-right me-2 icon-size"
+                                                    aria-hidden="true"></i>Freelance: <span
+                                                    class="text-muted">Available</span></h6>
                                         </div>
-
                                     </div>
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, necessitatibus
-                                        autem at voluptate vel ipsum blanditiis laboriosam provident qui aut?
-                                    </p>
-
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, necessitatibus
+                                        autem at voluptate vel ipsum blanditiis laboriosam provident qui aut?</p>
                                 </div>
-
                             </div>
+
 
                         </div>
                     </section>
@@ -198,7 +168,7 @@
                                 voluptas illo itaque cumque ea facilis fugit optio.</p>
 
                             <div class="row ">
-                                <div class="col-6 mb-3">
+                                <div class="col-lg-6 col-md-12 mb-3">
                                     <label for="progress1">Task 1</label>
                                     <div class="progress mb-3">
                                         <div class="progress-bar" role="progressbar" style="width: 25%;"
@@ -240,7 +210,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-6 mb-3">
+                                <div class="col-lg-6 col-md-12 mb-3">
                                     <label for="progress6">Task 6</label>
                                     <div class="progress mb-3">
                                         <div class="progress-bar" role="progressbar" style="width: 25%;"
@@ -293,7 +263,7 @@
                                 magni quis velit odio a, accusamus, at, dignissimos facere in.</p>
 
                             <div class="row justify-content-between ">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-md-12">
                                     <div class="mb-3">
                                         <!-- <div class="circle"> <i class="fa fa-circle-o icon" aria-hidden="true"></i></div> -->
                                         <h3 class="text-dark">Title</h3>
@@ -310,7 +280,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6 col-md-12">
                                     <div class="mb-3">
                                         <!-- <div class="circle"> <i class="fa fa-circle-o icon" aria-hidden="true"></i></div> -->
                                         <h3 class="text-dark">Title</h3>
@@ -359,7 +329,7 @@
                                 in.</p>
 
                             <div class="d-flex flex-wrap justify-space-between">
-                                <div class="col-lg-4 col-md-4 col-6  p-3">
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3  p-3">
                                     <div class="portfolio-item">
                                         <div class="card shadow">
                                             <div class="image">
@@ -374,7 +344,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-6 mb-3 p-3 ">
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 ">
                                     <div class="portfolio-item">
                                         <div class="card shadow">
                                             <img class="card-img-top" src="photo.jpeg" alt="Title" />
@@ -386,7 +356,19 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-6 mb-3 p-3 ">
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 ">
+                                    <div class="portfolio-item">
+                                        <div class="card shadow">
+                                            <img class="card-img-top" src="photo.jpeg" alt="Title" />
+                                            <div class="card-body">
+                                                <h4 class="card-title">Title</h4>
+                                                <p class="card-text">Text</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3 ">
                                     <div class="portfolio-item">
                                         <div class="card shadow">
                                             <img class="card-img-top" src="photo.jpeg" alt="Title" />
@@ -408,33 +390,51 @@
                                 eligendi tenetur consequatur magni quis velit odio a, accusamus, at, dignissimos facere
                                 in.</p>
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-6 mb-3 p-3">
+                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
                                     <div class="services-item">
-                                        <div class=" ">
-                                            <h4 class="text-dark">Title</h4>
-                                            <p class="text-indent card-text"> Lorem ipsum dolor sit amet consectetur,
+                                        <div class="card shadow  ">
+                                            <h4 class="text-dark card-header">Title</h4>
+                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
+                                                consectetur,
                                                 adipisicing elit. Rem reiciendis optio odio voluptates at error
                                                 corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
                                                 numquam! Laboriosam maiores omnis impedit!</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-3 p-3">
+                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
                                     <div class="services-item">
-                                        <div class=" ">
-                                            <h4 class="text-dark">Title</h4>
-                                            <p class="text-indent card-text"> Lorem ipsum dolor sit amet consectetur,
+                                        <div class="card shadow ">
+                                            <h4 class="text-dark card-header ">Title</h4>
+                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
+                                                consectetur,
                                                 adipisicing elit. Rem reiciendis optio odio voluptates at error
                                                 corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
                                                 numquam! Laboriosam maiores omnis impedit!</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-6 mb-3 p-3">
+                                <style>
+
+                                </style>
+                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
                                     <div class="services-item">
-                                        <div class=" ">
-                                            <h4 class="text-dark">Title</h4>
-                                            <p class="text-indent card-text"> Lorem ipsum dolor sit amet consectetur,
+                                        <div class="card shadow ">
+                                            <h4 class="text-dark card-header ">Title</h4>
+                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
+                                                consectetur,
+                                                adipisicing elit. Rem reiciendis optio odio voluptates at error
+                                                corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
+                                                numquam! Laboriosam maiores omnis impedit!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
+                                    <div class="services-item">
+                                        <div class="card shadow ">
+                                            <h4 class="text-dark card-header ">Title</h4>
+                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
+                                                consectetur,
                                                 adipisicing elit. Rem reiciendis optio odio voluptates at error
                                                 corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
                                                 numquam! Laboriosam maiores omnis impedit!</p>
@@ -489,12 +489,15 @@
                 </div>
             </div>
         </section>
+
     </main>
+    <button onclick="scrollToTop()" id="upArrowBtn" title="Go to top">
+        <i class="fa fa-arrow-up fa-5x" aria-hidden="true"></i>
+    </button>
     <footer class="text-center bg-secondary text-white py-3 footer">
         &copy; 2024 Sagar Timilsina. All rights reserved.
     </footer>
-
-    <!-- Bootstrap JavaScript Libraries -->
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -502,52 +505,25 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const typedElement = document.querySelector('.typed');
-            const roles = ["Frontend Developer", "PHP and Laravel Developer", "Electrician"];
-            let currentRoleIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            const typingSpeed = 100;
-            const deletingSpeed = 50;
-            const delayBetweenRoles = 1000; // Delay before starting to delete or type next word
+        // Show button on scroll
+        window.onscroll = function () { scrollFunction(); };
 
-            function type() {
-                const currentRole = roles[currentRoleIndex];
-                let displayedText = currentRole.slice(0, charIndex);
+        function scrollFunction() {
+            const upArrowBtn = document.getElementById("upArrowBtn");
+            // Check if page is scrolled more than 100px
 
-                // Show the currently typed portion
-                typedElement.textContent = displayedText;
-
-                if (!isDeleting) {
-                    // Typing: increment the character index
-                    if (charIndex < currentRole.length) {
-                        charIndex++;
-                        setTimeout(type, typingSpeed);
-                    } else {
-                        // Word completed, wait and then start deleting
-                        setTimeout(() => {
-                            isDeleting = true;
-                            setTimeout(type, delayBetweenRoles);
-                        }, delayBetweenRoles);
-                    }
-                } else {
-                    // Deleting: decrement the character index
-                    if (charIndex > 0) {
-                        charIndex--;
-                        setTimeout(type, deletingSpeed);
-                    } else {
-                        // Word deleted, switch to the next role
-                        isDeleting = false;
-                        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-                        setTimeout(type, typingSpeed);
-                    }
-                }
+            $height = window.innerHeight;
+            if (document.documentElement.scrollTop >  $height) {
+                upArrowBtn.style.display = "block";
+            } else {
+                upArrowBtn.style.display = "none";
             }
+        }
 
-            // Start typing initially
-            type();
-        });
+        // Scroll smoothly to the top when button clicked
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 
 </body>
