@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     // Load the JSON data
-    $.getJSON("about.json")
+    $.getJSON("/assets/json/about.json")
         .done(function (data) {
             // Populate the fields with the data
             const { aboutMe } = data;
@@ -35,7 +35,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     // Load the skills data
-    $.getJSON("skills.json")
+    $.getJSON("/assets/json/skills.json")
         .done(function (data) {
             const skills = data.skills;
             skills.forEach((skill, index) => {
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     // Load the resume data
-    $.getJSON("resume.json")
+    $.getJSON("/assets/json/resume.json")
         .done(function (data) {
             const resumes = data.resume;
             resumes.forEach(resume => {
@@ -129,7 +129,7 @@ $(document).ready(function () {
 // Function to load JSON data
 async function loadProjects() {
     try {
-        const response = await fetch('projects.json'); // Fetch the JSON file
+        const response = await fetch('/assets/json/projects.json'); // Fetch the JSON file
         const projects = await response.json(); // Parse the JSON data
 
         const portfolioItemsContainer = document.getElementById('portfolio-items');
@@ -166,7 +166,7 @@ loadProjects();
 // Function to load JSON data for services
 async function loadServices() {
     try {
-        const response = await fetch('services.json'); // Fetch the JSON file
+        const response = await fetch('/assets/json/services.json'); // Fetch the JSON file
         const services = await response.json(); // Parse the JSON data
 
         const servicesItemsContainer = document.getElementById('services-items');
