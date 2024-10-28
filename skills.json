@@ -1,0 +1,14 @@
+{
+    "skills": [
+        { "task": "Task 1", "progress": 25 },
+        { "task": "Task 2", "progress": 50 },
+        { "task": "Task 3", "progress": 75 },
+        { "task": "Task 4", "progress": 100 },
+        { "task": "Task 5", "progress": 30 },
+        { "task": "Task 6", "progress": 25 },
+        { "task": "Task 7", "progress": 50 },
+        { "task": "Task 8", "progress": 75 },
+        { "task": "Task 9", "progress": 100 },
+        { "task": "Task 10", "progress": 40 }
+    ]
+}

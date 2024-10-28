@@ -1,0 +1,22 @@
+{
+    "resume": [
+        {
+            "title": "Job Title 1",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque, voluptas voluptatem praesentium."
+          
+        },
+        
+        {
+            "title": "Job Title 2",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque, voluptas voluptatem praesentium.",
+            "subtitle": "Subtitle 2",
+            "date": "2003-05-12",
+            "location": "Pokhara",
+            "bulletPoints": [
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque.",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque.",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque."
+            ]
+        }
+    ]
+}

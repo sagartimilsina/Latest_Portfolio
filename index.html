@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5489e1503c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -105,382 +106,85 @@
                             <h2 class="text-dark">About Me</h2>
                             <div class="line"></div>
 
-                            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elitcnejngdvendgnvlore Lorem ipsum,
-                                dolor
-                                sit amet consectetur adipisicing elit. Dignissimos nemo quo officia, ducimus eius veniam
-                                dolor expedita sit sint fugiat provident error cumque. Laudantium, saepe corporis! Nam
-                                magni
-                                perspiciatis numquam voluptatem esse. A vel nam voluptas temporibus, placeat ducimus,
-                                consequuntur itaque laboriosam eum nemo harum debitis ullam magnam deserunt iure.</p>
+                            <p id="about-description" class="text-justify"></p>
 
-                            <div class="row mt-5 ">
-                                <div class=" col-lg-6 col-md-12 text-center mb-3">
-                                    <img src="photo.jpeg" alt="Profile Picture" class="img-fluid rounded"
+                            <div class="row mt-5">
+                                <div class="col-lg-6 col-md-12 text-center mb-3">
+                                    <img id="profile-picture" src="" alt="Profile Picture" class="img-fluid rounded"
                                         style="max-height: 500px; width: auto;">
                                 </div>
 
                                 <div class="col-lg-6 col-md-12 mb-3">
-                                    <h3 class="text-dark">Title</h3>
-                                    <p class="text-dark mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Ratione quos officiis necessitatibus doloremque, voluptas voluptatem
-                                        praesentium. Lorem ipsum dolor sit amet consectetu.</p>
+                                    <h3 id="about-title" class="text-dark"></h3>
+                                    <p class="text-dark mt-3" id="about-title-description"></p>
+
                                     <div class="row">
-                                        <div class="col-12 col-md-6 col-sm-12 col-lg-6 d-flex flex-column mb-3 ">
-                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
-                                                    aria-hidden="true"></i>Birthday: <span
-                                                    class="text-muted">2001-02-18</span></h6>
-                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
-                                                    aria-hidden="true"></i>Website: <span
-                                                    class="text-muted">www.sagartimilsina.com.np</span></h6>
-                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
-                                                    aria-hidden="true"></i>Phone: <span class="text-muted">+977
-                                                    9819113548</span></h6>
-                                            <h6 class="text-dark mb-2 "><i class="fa fa-chevron-right me-2 icon-size"
-                                                    aria-hidden="true"></i>Address: <span class="text-muted">Pokhara,
-                                                    Kaski, Nepal</span></h6>
+                                        <div class="col-12 col-md-6 col-lg-6 d-flex flex-column mb-3">
+                                            <!-- Dynamic information goes here -->
+                                            <div id="personal-info" class="text-dark"></div>
                                         </div>
-                                        <div class="col-12 col-md-6 col-sm-12 col-lg-6 d-flex flex-column mb-3">
-                                            <h6 class="text-dark mb-2"><i class="fa fa-chevron-right me-2 icon-size"
-                                                    aria-hidden="true"></i>Degree: <span
-                                                    class="text-muted">Bachelor</span></h6>
-                                            <h6 class="text-dark mb-2"><i class="fa fa-chevron-right me-2 icon-size"
-                                                    aria-hidden="true"></i>Email: <span
-                                                    class="text-muted">timilsinasagar04@gmail.com</span></h6>
-                                            <h6 class="text-dark mb-2"><i class="fa fa-chevron-right me-2 icon-size"
-                                                    aria-hidden="true"></i>Freelance: <span
-                                                    class="text-muted">Available</span></h6>
+                                        <div class="col-12 col-md-6 col-lg-6 d-flex flex-column mb-3">
+                                            <div id="education-info" class="text-dark"></div>
                                         </div>
                                     </div>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, necessitatibus
-                                        autem at voluptate vel ipsum blanditiis laboriosam provident qui aut?</p>
+
+                                    <p id="additional-info"></p>
                                 </div>
                             </div>
-
-
                         </div>
+
                     </section>
                     <section>
-
                         <div id="skills" class="skills">
                             <h2 class="text-dark">Skills</h2>
                             <div class="line"></div>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo cum, nobis corporis
                                 voluptas illo itaque cumque ea facilis fugit optio.</p>
 
-                            <div class="row ">
-                                <div class="col-lg-6 col-md-12 mb-3">
-                                    <label for="progress1">Task 1</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;"
-                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            25%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress2">Task 2</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%;"
-                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                                            50%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress3">Task 3</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 75%;"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                            75%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress4">Task 4</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 100%;"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                            100%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress5">Task 5</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 30%;"
-                                            aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                            30%
-                                        </div>
-                                    </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 mb-3" id="skills-container-left">
+                                    <!-- Dynamic Skill Bars for the Left Column -->
                                 </div>
-
-                                <div class="col-lg-6 col-md-12 mb-3">
-                                    <label for="progress6">Task 6</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 25%;"
-                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                            25%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress7">Task 7</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 50%;"
-                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                                            50%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress8">Task 8</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 75%;"
-                                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                            75%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress9">Task 9</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 100%;"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                                            100%
-                                        </div>
-                                    </div>
-
-                                    <label for="progress10">Task 10</label>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 40%;"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                            40%
-                                        </div>
-                                    </div>
+                                <div class="col-lg-6 col-md-12 mb-3" id="skills-container-right">
+                                    <!-- Dynamic Skill Bars for the Right Column -->
                                 </div>
                             </div>
+                        </div>
+
 
                     </section>
                     <section>
                         <div id="resume" class="resume">
                             <h2 class="text-dark">Resume</h2>
                             <div class="line"></div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet,
-                                consectetur adipisicing elit. Omnis dolore itaque quaerat eligendi tenetur consequatur
-                                magni quis velit odio a, accusamus, at, dignissimos facere in.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolore itaque quaerat
+                                eligendi tenetur consequatur magni quis velit odio a, accusamus, at, dignissimos facere
+                                in.</p>
 
-                            <div class="row justify-content-between ">
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="mb-3">
-                                        <!-- <div class="circle"> <i class="fa fa-circle-o icon" aria-hidden="true"></i></div> -->
-                                        <h3 class="text-dark">Title</h3>
-                                        <div class="border-left">
-                                            <p class="text-dark mt-3">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                elit.
-                                                Ratione
-                                                quos
-                                                officiis
-                                                necessitatibus
-                                                doloremque, voluptas voluptatem praesentium. Lorem ipsum dolor sit amet
-                                                consectetu
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <div class="mb-3">
-                                        <!-- <div class="circle"> <i class="fa fa-circle-o icon" aria-hidden="true"></i></div> -->
-                                        <h3 class="text-dark">Title</h3>
-                                        <div class="border-left">
-                                            <h4 class="text-dark">Subtitle</h4>
-                                            <h6>2001-02-18</h6>
-                                            <h6 class="text-muted">Pokhara</h6>
-                                            <ul>
-                                                <li class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                    elit.
-                                                    Ratione
-                                                    quos
-                                                    officiis
-                                                    necessitatibus
-                                                    doloremque, voluptas voluptatem praesentium.
-                                                </li>
-                                                <li class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                    elit.
-                                                    Ratione
-                                                    quos
-                                                    officiis
-                                                    necessitatibus
-                                                    doloremque, voluptas voluptatem praesentium.
-                                                </li>
-                                                <li class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing
-                                                    elit.
-                                                    Ratione
-                                                    quos
-                                                    officiis
-                                                    necessitatibus
-                                                    doloremque, voluptas voluptatem praesentium.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="row justify-content-between" id="resume-container">
+                                <!-- Dynamic Resume Content will be injected here -->
                             </div>
                         </div>
                     </section>
-                    <!-- <section class="portfolio">
+
+                    <section class="portfolio">
                         <div id="portfolio">
                             <h2 class="text-dark">Projects</h2>
                             <div class="line"></div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolore itaque quaerat
                                 eligendi tenetur consequatur magni quis velit odio a, accusamus, at, dignissimos facere
                                 in.</p>
-
-                            <div class="d-flex flex-wrap justify-space-between">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3">
-                                    <div class="portfolio-item">
-                                        <div class="card shadow">
-                                            <div class="image">
-                                                <img class="card-img-top img-fluid" src="photo.jpeg" alt="Title"
-                                                    height="200px" width="auto" />
-
-                                               
-                                                <div class="overlay">
-
-                                                    <a href="#" class="view-link text-white"> <i class="fa fa-link"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Title</h4>
-                                                <p class="card-text">Text</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3">
-                                    <div class="portfolio-item">
-                                        <div class="card shadow">
-                                            <div class="image">
-                                                <img class="card-img-top img-fluid" src="photo.jpeg" alt="Title"
-                                                    height="200px" width="auto" />
-
-                                             
-                                                <div class="overlay">
-
-                                                    <a href="#" class="view-link text-white"> <i class="fa fa-link"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Title</h4>
-                                                <p class="card-text">Text</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3">
-                                    <div class="portfolio-item">
-                                        <div class="card shadow">
-                                            <div class="image">
-                                                <img class="card-img-top img-fluid" src="photo.jpeg" alt="Title"
-                                                    height="200px" width="auto" />
-
-                                             
-                                                <div class="overlay">
-
-                                                    <a href="#" class="view-link text-white"> <i class="fa fa-link"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Title</h4>
-                                                <p class="card-text">Text</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3">
-                                    <div class="portfolio-item">
-                                        <div class="card shadow">
-                                            <div class="image">
-                                                <img class="card-img-top img-fluid" src="photo.jpeg" alt="Title"
-                                                    height="200px" width="auto" />
-
-                                             
-                                                <div class="overlay">
-
-                                                    <a href="#" class="view-link text-white"> <i class="fa fa-link"
-                                                            aria-hidden="true"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Title</h4>
-                                                <p class="card-text">Text</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="d-flex flex-wrap justify-space-between" id="portfolio-items"></div>
                         </div>
-                    </section> -->
-                    <section class="services  ">
-                        <div id="services" class="">
+                    </section>
+                    <section class="services">
+                        <div id="services">
                             <h2 class="text-dark">Services</h2>
                             <div class="line"></div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolore itaque quaerat
                                 eligendi tenetur consequatur magni quis velit odio a, accusamus, at, dignissimos facere
                                 in.</p>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
-                                    <div class="services-item">
-                                        <div class="card shadow  ">
-                                            <h4 class="text-dark card-header">Title</h4>
-                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
-                                                consectetur,
-                                                adipisicing elit. Rem reiciendis optio odio voluptates at error
-                                                corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
-                                                numquam! Laboriosam maiores omnis impedit!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
-                                    <div class="services-item">
-                                        <div class="card shadow ">
-                                            <h4 class="text-dark card-header ">Title</h4>
-                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
-                                                consectetur,
-                                                adipisicing elit. Rem reiciendis optio odio voluptates at error
-                                                corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
-                                                numquam! Laboriosam maiores omnis impedit!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <style>
-
-                                </style>
-                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
-                                    <div class="services-item">
-                                        <div class="card shadow ">
-                                            <h4 class="text-dark card-header ">Title</h4>
-                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
-                                                consectetur,
-                                                adipisicing elit. Rem reiciendis optio odio voluptates at error
-                                                corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
-                                                numquam! Laboriosam maiores omnis impedit!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 col-md-4 col-12 col-sm-6 mb-3 p-3">
-                                    <div class="services-item">
-                                        <div class="card shadow ">
-                                            <h4 class="text-dark card-header ">Title</h4>
-                                            <p class="text-indent card-body text-justify"> Lorem ipsum dolor sit amet
-                                                consectetur,
-                                                adipisicing elit. Rem reiciendis optio odio voluptates at error
-                                                corporis, sit maxime minus tempore, rerum in neque! Obcaecati, ad
-                                                numquam! Laboriosam maiores omnis impedit!</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="row" id="services-items"></div>
                         </div>
                     </section>
 
@@ -556,6 +260,8 @@
         &copy; 2024 Sagar Timilsina. All rights reserved.
     </footer>
     <script src="index.js"></script>
+    <script src="json-render.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -634,7 +340,7 @@
             document.getElementById("form").reset();
         });
     </script>
-   
+
 
 </body>
 
