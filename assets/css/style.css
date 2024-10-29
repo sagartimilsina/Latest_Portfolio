@@ -195,13 +195,18 @@
     margin: 10px 0;
 }
 
+.skills .fa-icon {
+    color: #ff6347;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
 .about p,
 .skills p,
 .resume p,
 .portfolio p {
     font-size: 1rem;
     line-height: 1.5;
-
     text-align: justify;
     color: #333;
 }
@@ -220,6 +225,10 @@
     margin-left: 10px;
 
 
+}
+
+.progress-bar {
+    background-color: #ff6347;
 }
 
 .portfolio .card {
@@ -308,21 +317,25 @@ footer {
     border-radius: 4px;
     /* Optional: Rounded edges */
 }
+
 /* Up Arrow Button Styles */
 #upArrowBtn {
     display: none;
     position: fixed;
     bottom: 100px;
     right: 100px;
-    z-index: 99; /* Stay on top */
+    z-index: 99;
+    /* Stay on top */
     font-size: 24px;
     border: none;
     outline: none;
-    background-color: #333; /* Background color */
-    color:#fff; /* Text color */
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
     cursor: pointer;
     padding: 10px 15px;
-    border-radius: 10px;	
+    border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -335,8 +348,10 @@ footer {
     background-color: #f4f4f4;
     border-bottom: 2px solid #ccc;
 }
+
 #upArrowBtn:hover {
-    background-color: #555; /* Darker background on hover */
+    background-color: #555;
+    /* Darker background on hover */
 }
 
 .portfolio-item {
@@ -358,27 +373,34 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent overlay */
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .image:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1;
+    /* Show overlay on hover */
 }
 
 .view-link {
-    color: #fff; /* White text */
+    color: #fff;
+    /* White text */
     font-size: 18px;
     text-decoration: none;
-    background-color:#ff6347;; /* Button color */
+    background-color: #ff6347;
+    ;
+    /* Button color */
     padding: 10px 20px;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
 .view-link:hover {
-    background-color:#f42c09;; /* Darker on hover */
+    background-color: #f42c09;
+    ;
+    /* Darker on hover */
 }
 
 

@@ -33,35 +33,141 @@ $(document).ready(function () {
             $("#about-description").text("Unable to load about me information at this time.");
         });
 });
-$(document).ready(function () {
-    // Load the skills data
-    $.getJSON("/assets/json/skills.json")
-        .done(function (data) {
-            const skills = data.skills;
-            skills.forEach((skill, index) => {
-                const progressBar = `
-                    <label for="progress${index + 1}" class="form-label">${skill.task}</label>
-                    <div class="progress mb-3">
-                        <div class="progress-bar " role="progressbar" style="width: ${skill.progress}%;"
-                            aria-valuenow="${skill.progress}" aria-valuemin="0" aria-valuemax="100">
-                            ${skill.progress}%
-                        </div>
-                    </div>
-                `;
 
-                // Append to the left or right column based on index
-                if (index < 5) {
-                    $("#skills-container-left").append(progressBar);
-                } else {
-                    $("#skills-container-right").append(progressBar);
+// $(document).ready(function () {
+//     $.getJSON("/assets/json/skills.json") // Load JSON file dynamically from your server location
+//         .done(function (data) {
+//             const skillsData = data.skills;
+//             // Populate title and description
+//             $("#skills h2").text(skillsData.title);
+//             $("#skills p").text(skillsData.description);
+
+//             const $skillsContainer = $("#skills-container");
+
+//             skillsData.categories.forEach((category) => {
+//                 // Define column size based on category
+//                 const colSize = category.title === "Technical Skills" ? "col-lg-12" : "col-lg-6 col-md-6 col-sm-12";
+//                 const $card = $("<div>").addClass(`card shadow mb-4 p-4 ${colSize} justify-content-between`);
+
+//                 // Category title
+//                 const $cardTitle = $("<h3>").addClass("card-title text-center").text(category.title);
+//                 $card.append($cardTitle);
+
+//                 // Create a row with gap for columns
+//                 const $row = $("<div>").addClass("row g-3 mt-3"); // Added 'g-3' for consistent column spacing
+
+//                 if (category.title === "Technical Skills") {
+//                     // Divide items into 4 columns for Technical Skills
+//                     const chunkSize = Math.ceil(category.items.length / 4);
+//                     for (let i = 0; i < 4; i++) {
+//                         const $col = $("<div>").addClass("col-lg-3 col-md-4 col-sm-6 col-12");
+//                         const $list = $("<ul>").addClass("list-unstyled");
+
+//                         category.items.slice(i * chunkSize, (i + 1) * chunkSize).forEach(item => {
+//                             const $listItem = $("<li>").html(`<i class="fa fa-check-circle fa-icon" aria-hidden="true"></i> ${item}`);
+//                             $list.append($listItem);
+//                         });
+
+//                         $col.append($list);
+//                         $row.append($col);
+//                     }
+//                 } else if (category.title === "Non Technical Skills" || category.title === "Languages") {
+//                     $items = category.items.length;
+
+//                     for (let i = 0; i < $items; i++) {
+//                         const $col = $("<div>").addClass("col-lg-6 col-md-6 col-sm-12");
+//                         const $list = $("<ul>").addClass("list-unstyled");
+
+//                         category.items.slice(i * chunkSize, (i + 1) * chunkSize).forEach(item => {
+//                             const $listItem = $("<li>").html(`<i class="fa fa-check-circle fa-icon" aria-hidden="true"></i> ${item}`);
+//                             $list.append($listItem);
+//                         });
+
+//                         $col.append($list);
+//                         $row.append($col);
+//                     }
+//                 }
+
+//                 // Add row to card, and card to the main container
+//                 $card.append($row);
+//                 $skillsContainer.append($card);
+//             });
+//         })
+//         .fail(function () {
+//             console.error("Error loading skills data");
+//         });
+// });
+
+
+
+$(document).ready(function () {
+    $.getJSON("/assets/json/skills.json") // Load JSON file dynamically
+        .done(function (data) {
+            const skillsData = data.skills;
+
+            // Populate title and description
+            $("#skills h2").text(skillsData.title);
+            $("#skills p").text(skillsData.description);
+
+            const $skillsContainer = $("#skills-container");
+
+            skillsData.categories.forEach((category) => {
+                // Define column size based on category
+                const $row = $("<div>").addClass("row");
+                const colSize = category.title === "Technical Skills" ? "  col-lg-12" : "col-lg-6 col-md-6 col-sm-12 ";
+
+                const $card = $("<div>").addClass(`card shadow mb-4 p-4 ${colSize} justify-content-between`);
+
+                // Category title
+                const $cardTitle = $("<h3>").addClass("card-title text-center mb-3").text(category.title);
+                $card.append($cardTitle);
+
+                // Divide items into columns based on category
+                let chunkSize = 1;
+
+                let colClass = " col-lg-6 col-md-6 col-sm-12"; // Default for non-technical and languages
+
+                if (category.title === "Technical Skills") {
+                    chunkSize = Math.ceil(category.items.length / 4);
+                    colClass = " col-lg-3 col-md-4 col-sm-6 col-12 ";
+                } else if (category.title === "Non Technical Skills" || category.title === "Languages") {
+
+                    chunkSize = Math.ceil(category.items.length / 2);
+
                 }
+
+                // Populate each column
+                for (let i = 0; i < Math.ceil(category.items.length / chunkSize); i++) {
+
+                    const $col = $("<div>").addClass(colClass);
+                    const $list = $("<ul>").addClass("list-unstyled");
+
+                    category.items.slice(i * chunkSize, (i + 1) * chunkSize).forEach(item => {
+                        const $listItem = $("<li>").html(`<i class="fa fa-check-circle fa-icon" aria-hidden="true"></i> ${item}`);
+                        $list.append($listItem);
+                    });
+
+                    $col.append($list);
+                    $row.append($col);
+
+
+                }
+
+                // Add row to card, and card to the main container
+                $card.append($row);
+
+                $skillsContainer.append($card);
             });
         })
         .fail(function () {
-            console.error("Failed to load skills data.");
-            $("#skills-container-left, #skills-container-right").text("Unable to load skills information at this time.");
+            console.error("Error loading skills data");
         });
 });
+
+
+
+
+
 
 
 $(document).ready(function () {

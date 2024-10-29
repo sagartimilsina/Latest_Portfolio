@@ -1,14 +1,44 @@
 {
-    "skills": [
-        { "task": "Web Development (PHP, Laravel)", "progress": 80 },
-        { "task": "JavaScript & AJAX", "progress": 70 },
-        { "task": "HTML & CSS", "progress": 90 },
-        { "task": "Responsive Design", "progress": 85 },
-        { "task": "Database Management", "progress": 75 },
-        { "task": "Version Control (Git)", "progress": 60 },
-        { "task": "Problem-Solving", "progress": 80 },
-        { "task": "Team Collaboration", "progress": 90 },
-        { "task": "Continuous Learning", "progress": 95 },
-        { "task": "Project Management", "progress": 70 }
-    ]
+    "skills": {
+        "title": "Skills",
+        "description": "I have a strong set of skills in web development, focusing on creating user-friendly applications. My expertise includes PHP (Laravel) for back-end development and HTML, CSS, and JavaScript for responsive front-end design. I am always eager to learn new technologies and improve my abilities to deliver effective solutions.",
+        "categories": [
+            {
+                "title": "Technical Skills",
+                "items": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "React",
+                    "Node.js",
+                    "Python",
+                    "Django",
+                    "MySQL",
+                    "MongoDB",
+                    "Git",
+                    "AWS",
+                    "Docker"
+                ]
+            },
+            {
+                "title": "Non Technical Skills",
+                "items": [
+                    "Communication",
+                    "Time Management",
+                    "Problem Solving",
+                    "Leadership",
+                    "Teamwork",
+                    "Creativity"
+                ]
+            },
+            {
+                "title": "Languages",
+                "items": [
+                    "English",
+                    "Nepali",
+                    "Hindi"
+                ]
+            }
+        ]
+    }
 }
