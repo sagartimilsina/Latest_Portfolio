@@ -123,7 +123,7 @@ $(document).ready(function () {
                 $card.append($cardTitle);
 
                 // Divide items into columns based on category
-                let chunkSize = 1;
+                let chunkSize = 0;
 
                 let colClass = " col-lg-6 col-md-6 col-sm-12"; // Default for non-technical and languages
 
