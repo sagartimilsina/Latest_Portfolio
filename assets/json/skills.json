@@ -1,14 +1,14 @@
 {
     "skills": [
-        { "task": "Task 1", "progress": 25 },
-        { "task": "Task 2", "progress": 50 },
-        { "task": "Task 3", "progress": 75 },
-        { "task": "Task 4", "progress": 100 },
-        { "task": "Task 5", "progress": 30 },
-        { "task": "Task 6", "progress": 25 },
-        { "task": "Task 7", "progress": 50 },
-        { "task": "Task 8", "progress": 75 },
-        { "task": "Task 9", "progress": 100 },
-        { "task": "Task 10", "progress": 40 }
+        { "task": "Web Development (PHP, Laravel)", "progress": 80 },
+        { "task": "JavaScript & AJAX", "progress": 70 },
+        { "task": "HTML & CSS", "progress": 90 },
+        { "task": "Responsive Design", "progress": 85 },
+        { "task": "Database Management", "progress": 75 },
+        { "task": "Version Control (Git)", "progress": 60 },
+        { "task": "Problem-Solving", "progress": 80 },
+        { "task": "Team Collaboration", "progress": 90 },
+        { "task": "Continuous Learning", "progress": 95 },
+        { "task": "Project Management", "progress": 70 }
     ]
 }

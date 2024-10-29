@@ -1,15 +1,14 @@
 {
-    "aboutMe": {
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nemo quo officia, ducimus eius veniam dolor expedita sit sint fugiat provident error cumque.",
-      "title": "My Title",
-      "birthday": "2001-02-18",
-      "website": "www.sagartimilsina.com.np",
-      "phone": "+977 9819113548",
-      "address": "Pokhara, Kaski, Nepal",
-      "degree": "Bachelor",
-      "email": "timilsinasagar04@gmail.com",
-      "freelance": "Available",
-      "profilePicture": "/assets/images/photo.jpeg"
-    }
+  "aboutMe": {
+    "description": " I am a passionate web developer focused on building dynamic, user-centric applications. My journey in web development is driven by a fascination with technology's ability to solve real-world problems. I thrive on challenges and enjoy the process of creating applications that enhance user experiences.",
+    "title": "Full Stack Web Developer",
+    "birthday": "2001-02-18",
+    "website": "sagartimilsina.com.np",
+    "phone": "+977 9819113548",
+    "address": "Pokhara, Kaski, Nepal",
+    "degree": "Bachelor",
+    "email": "timilsinasagar04@gmail.com",
+    "freelance": "Available",
+    "profilePicture": "/assets/images/photo.jpeg"
   }
-  
+}

@@ -1,21 +1,80 @@
 {
     "resume": [
         {
-            "title": "Job Title 1",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque, voluptas voluptatem praesentium."
-          
-        },
-        
-        {
-            "title": "Job Title 2",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque, voluptas voluptatem praesentium.",
-            "subtitle": "Subtitle 2",
-            "date": "2003-05-12",
-            "location": "Pokhara",
+            "title": "Summary",
+            "description": "I am a passionate web developer focused on building dynamic, user-centric applications. My journey in web development is driven by a fascination with technology's ability to solve real-world problems. I thrive on challenges and enjoy the process of creating applications that enhance user experiences.",
             "bulletPoints": [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque.",
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque."
+                "Pokhara, Kaski, Gandaki, Nepal",
+                "+977 9819113548",
+                "timilsinasagar04@gmail.com",
+                "sagartimilsina.com.np"
+            ]
+        },
+       
+        {
+            "title": "Professional Experience",
+            "description": "I have gained practical experience through internships and projects.",
+            "jobs": [
+                {
+                    "jobTitle": "Web Developer Intern",
+                    "company": "Tech Solutions Ltd.",
+                    "date": "2023/06 - 2023/08",
+                    "location": "Pokhara, Nepal",
+                    "bulletPoints": [
+                        "Developed web applications using PHP and Laravel.",
+                        "Collaborated with the design team to implement responsive UI.",
+                        "Participated in code reviews and debugging sessions."
+                    ]
+                },
+                {
+                    "jobTitle": "Freelance Web Developer",
+                    "company": "Self-employed",
+                    "date": "2022/01 - Present",
+                    "location": "Remote",
+                    "bulletPoints": [
+                        "Designed and developed custom websites for local businesses.",
+                        "Utilized JavaScript and AJAX for interactive features.",
+                        "Managed project timelines and client communications."
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Education",
+            "degrees": [
+                {
+                    "subtitle": "Bachelor in Computer Science and Information Technology (B.Sc.CSIT)",
+                    "description": "Currently pursuing a Bachelor's degree focusing on software development and web technologies.",
+                    "date": "2021/04/04 - Present",
+                    "location": "Pokhara, Kaski, Gandaki, Nepal",
+                    "bulletPoints": [
+                        "Gained foundational knowledge in programming languages such as Java, C++, and Python.",
+                        "Developed skills in web development using PHP, Laravel, HTML, CSS, and JavaScript.",
+                        "Participated in various projects that emphasized teamwork and problem-solving.",
+                        "Engaged in workshops and seminars to stay updated on industry trends and technologies."
+                    ]
+                },
+                {
+                    "subtitle": "High School Diploma",
+                    "description": "Completed my high school education with a strong focus on science and mathematics.",
+                    "date": "2018/04/01 - 2021/04/01",
+                    "location": "Pokhara, Kaski, Gandaki, Nepal",
+                    "bulletPoints": [
+                        "Achieved excellent grades in science and mathematics subjects.",
+                        "Participated in extracurricular activities, including coding clubs and science fairs.",
+                        "Developed critical thinking and analytical skills through various projects."
+                    ]
+                },
+                {
+                    "subtitle": "SLC",
+                    "description": "Completed my Secondary Level Education.",
+                    "date": "2016/04/01 - 2018/04/01",
+                    "location": "Pokhara, Kaski, Gandaki, Nepal",
+                    "bulletPoints": [
+                        "Achieved excellent grades in all subjects.",
+                        "Participated in school clubs and extracurricular activities."
+                    ]
+                }
             ]
         }
     ]

@@ -9,22 +9,22 @@ $(document).ready(function () {
             $("#about-description").text(aboutMe.description);
             $("#profile-picture").attr("src", aboutMe.profilePicture);
             $("#about-title").text(aboutMe.title);
-            $("#about-title-description").text("Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quos officiis necessitatibus doloremque, voluptas voluptatem praesentium. Lorem ipsum dolor sit amet consectetu.");
-            $("#additional-info").text("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni, necessitatibus autem at voluptate vel ipsum blanditiis laboriosam provident qui aut?");
+            $("#about-title-description").text(" I specialize in technologies such as PHP (Laravel), AJAX, JavaScript, HTML, and CSS. My experience includes managing complex systems, developing back-end functionalities, and ensuring responsive front-end designs. As a proficient Laravel developer, I streamline application development and utilize AJAX and JavaScript to enhance user interactions, creating engaging experiences. My commitment to continuous learning pushes me to embrace new challenges and expand my skill set.");
+            $("#additional-info").text("");
 
             // Create personal and education info
             const personalInfo = `
-                    <h6 class="mb-2"><i class="fa fa-chevron-right me-2 icon-size"></i>Birthday: <span class="text-muted">${aboutMe.birthday}</span></h6>
-                    <h6 class="mb-2"><i class="fa fa-chevron-right me-2 icon-size"></i>Website: <span class="text-muted">${aboutMe.website}</span></h6>
-                    <h6 class="mb-2"><i class="fa fa-chevron-right me-2 icon-size"></i>Phone: <span class="text-muted">${aboutMe.phone}</span></h6>
-                    <h6 class="mb-2"><i class="fa fa-chevron-right me-2 icon-size"></i>Address: <span class="text-muted">${aboutMe.address}</span></h6>
+                    <h6 class="mb-3"><i class="fa fa-chevron-right me-2 icon-size"></i>Birthday: <span class="text-muted">${aboutMe.birthday}</span></h6>
+                    <h6 class="mb-3"><i class="fa fa-chevron-right me-2 icon-size"></i>Website: <span class="text-muted">${aboutMe.website}</span></h6>
+                    <h6 class="mb-3"><i class="fa fa-chevron-right me-2 icon-size"></i>Phone: <span class="text-muted">${aboutMe.phone}</span></h6>
+                    <h6 class="mb-3"><i class="fa fa-chevron-right me-2 icon-size"></i>Address: <span class="text-muted">${aboutMe.address}</span></h6>
                 `;
             $("#personal-info").html(personalInfo);
 
             const educationInfo = `
-                    <h6 class="mb-2"><i class="fa fa-chevron-right me-2 icon-size"></i>Degree: <span class="text-muted">${aboutMe.degree}</span></h6>
-                    <h6 class="mb-2"><i class="fa fa-chevron-right me-2 icon-size"></i>Email: <span class="text-muted">${aboutMe.email}</span></h6>
-                    <h6 class="mb-2"><i class="fa fa-chevron-right me-2 icon-size"></i>Freelance: <span class="text-muted">${aboutMe.freelance}</span></h6>
+                    <h6 class="mb-3"><i class="fa fa-chevron-right me-2 icon-size"></i>Degree: <span class="text-muted">${aboutMe.degree}</span></h6>
+                    <h6 class="mb-3"><i class="fa fa-chevron-right me-2 icon-size"></i>Email: <span class="text-muted">${aboutMe.email}</span></h6>
+                    <h6 class="mb-3"><i class="fa fa-chevron-right me-2 icon-size"></i>Freelance: <span class="text-muted">${aboutMe.freelance}</span></h6>
                 `;
             $("#education-info").html(educationInfo);
         })
@@ -40,9 +40,9 @@ $(document).ready(function () {
             const skills = data.skills;
             skills.forEach((skill, index) => {
                 const progressBar = `
-                    <label for="progress${index + 1}">${skill.task}</label>
+                    <label for="progress${index + 1}" class="form-label">${skill.task}</label>
                     <div class="progress mb-3">
-                        <div class="progress-bar" role="progressbar" style="width: ${skill.progress}%;"
+                        <div class="progress-bar " role="progressbar" style="width: ${skill.progress}%;"
                             aria-valuenow="${skill.progress}" aria-valuemin="0" aria-valuemax="100">
                             ${skill.progress}%
                         </div>
@@ -63,6 +63,7 @@ $(document).ready(function () {
         });
 });
 
+
 $(document).ready(function () {
     // Load the resume data
     $.getJSON("/assets/json/resume.json")
@@ -71,62 +72,110 @@ $(document).ready(function () {
             resumes.forEach(resume => {
                 // Start building the HTML for each resume item
                 let resumeHTML = `
-                    <div class="col-lg-6 col-md-12 mb-3">
+                    <div class="col-lg-6 col-md-12 mb-3 resume-item" data-aos="fade-up" data-aos-delay="200">
                         <div class="mb-3">
-                            <h3 class="text-dark">${resume.title || "No Title Available"}</h3>
+                            <h3 class="text-dark">${resume.title || ""}</h3>
                             <div class="border-left">
-                                <p class="text-dark mt-3">${resume.description || "No Description Available."}</p>
+                                <p class="text-dark mt-3">${resume.description || ""}</p>
                 `;
 
-                // Only include subtitle if it exists
-                if (resume.subtitle) {
-                    resumeHTML += `
-                            <h4 class="text-dark">${resume.subtitle}</h4>
-                    `;
-                }
-
-                // Only include date if it exists
-                if (resume.date) {
-                    resumeHTML += `
-                            <h6>${resume.date}</h6>
-                    `;
-                }
-
-                // Only include location if it exists
-                if (resume.location) {
-                    resumeHTML += `
-                            <h6 class="text-muted">${resume.location}</h6>
-                    `;
-                }
-
-                // Include bullet points if they exist
+                // Check for bullet points in the summary section
                 if (resume.bulletPoints && resume.bulletPoints.length > 0) {
-                    resumeHTML += '<ul>';
+                    resumeHTML += `<ul>`;
                     resume.bulletPoints.forEach(point => {
                         resumeHTML += `<li class="text-dark">${point}</li>`;
                     });
-                    resumeHTML += '</ul>';
-                } else {
-                    resumeHTML += '<p>No Bullet Points Available.</p>'; // Default message if no bullet points
+                    resumeHTML += `</ul>`;
+                }
+
+                // Check for degrees in the Education section
+                if (resume.degrees && resume.degrees.length > 0) {
+                    resume.degrees.forEach(degree => {
+                        resumeHTML += `
+                            <div class="mb-3">
+                                <h4 class="text-dark">${degree.subtitle || ""}</h4>
+                                <h6>${degree.date || ""}</h6>
+                                <h6 class="text-muted">${degree.location || ""}</h6>
+                                <p class="text-dark">${degree.description || ""}</p>
+                                <ul>
+                        `;
+
+                        // Include degree bullet points
+                        if (degree.bulletPoints && degree.bulletPoints.length > 0) {
+                            degree.bulletPoints.forEach(point => {
+                                resumeHTML += `<li class="text-dark">${point}</li>`;
+                            });
+                        } else {
+                            resumeHTML += '<li></li>'; // Default message if no bullet points
+                        }
+
+                        resumeHTML += `</ul></div>`;
+                    });
+                }
+
+                // Check if the resume has jobs
+                if (resume.jobs && resume.jobs.length > 0) {
+                    resumeHTML += `<div class="col-lg-12 mb-3 ">`;
+                    resume.jobs.forEach(job => {
+                        resumeHTML += `
+                            <div class="mb-3">
+                                <h4 class="text-dark">${job.jobTitle || ""}</h4>
+                                <h6>${job.company || ""} - ${job.date || ""}</h6>
+                                <h6 class="text-muted">${job.location || ""}</h6>
+                                <ul>
+                        `;
+
+                        // Include job bullet points
+                        if (job.bulletPoints && job.bulletPoints.length > 0) {
+                            job.bulletPoints.forEach(point => {
+                                resumeHTML += `<li class="text-dark">${point}</li>`;
+                            });
+                        } else {
+                            resumeHTML += '<li></li>'; // Default message if no bullet points
+                        }
+
+                        resumeHTML += `</ul></div>`;
+                    });
+                    resumeHTML += `</div>`;
                 }
 
                 // Closing tags for the resume item
-                resumeHTML += `
-                            </div>
-                        </div>
-                    </div>
-                `;
+                resumeHTML += `</div></div></div>`;
 
                 // Append to the resume container
                 $("#resume-container").append(resumeHTML);
             });
+
+            // Function to adjust heights of resume items
+            adjustResumeItemHeights();
+
         })
         .fail(function () {
             console.error("Failed to load resume data.");
             $("#resume-container").text("Unable to load resume information at this time.");
         });
+
+    // function adjustResumeItemHeights() {
+    //     const items = $('.resume-item'); // Select all resume items
+
+    //     // Calculate max height of items
+    //     let maxHeight = 0;
+    //     items.each(function () {
+    //         const itemHeight = $(this).outerHeight();
+    //         if (itemHeight > maxHeight) {
+    //             maxHeight = itemHeight; // Find the tallest item
+    //         }
+    //     });
+
+    //     // Set each item to the max height
+    //     items.each(function () {
+    //         $(this).css('height', maxHeight + 'px');
+    //     });
+    // }
 });
-// Function to load JSON data
+
+
+
 async function loadProjects() {
     try {
         const response = await fetch('/assets/json/projects.json'); // Fetch the JSON file
