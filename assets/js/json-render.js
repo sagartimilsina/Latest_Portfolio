@@ -165,121 +165,68 @@ $(document).ready(function () {
 });
 
 
-
-
-
-
-
 $(document).ready(function () {
-    // Load the resume data
+    // Fetching the JSON data
     $.getJSON("/assets/json/resume.json")
         .done(function (data) {
-            const resumes = data.resume;
-            resumes.forEach(resume => {
-                // Start building the HTML for each resume item
-                let resumeHTML = `
-                    <div class="col-lg-6 col-md-12 mb-3 resume-item" data-aos="fade-up" data-aos-delay="200">
-                        <div class="mb-3">
-                            <h3 class="text-dark">${resume.title || ""}</h3>
-                            <div class="border-left">
-                                <p class="text-dark mt-3">${resume.description || ""}</p>
+            const resume = data.resume;
+
+            // Populate the summary section
+            const summary = resume.find(item => item.title === "Summary");
+            let summaryHTML = `
+                <div class="timeline-item">
+                    <h5>${summary.name || ""}</h5>
+                    <p>${summary.description || ""}</p>
+                    <ul>
+                        <li>${summary.bulletPoints[0] || ""}</li>
+                        <li>${summary.bulletPoints[1] || ""}</li>
+                        <li>${summary.bulletPoints[2] || ""}</li>
+                        <li><a href="${summary.bulletPoints[3]}" target="_blank">${summary.bulletPoints[3]}</a></li>
+                    </ul>
+                </div>
+            `;
+            $("#summary-container").append(summaryHTML);
+
+            // Populate the education section
+            const education = resume.find(item => item.title === "Education");
+            education.degrees.forEach(degree => {
+                let educationHTML = `
+                    <div class="timeline-item">
+                        <h5>${degree.subtitle || ""}</h5>
+                        <p><strong>${degree.date || ""}</strong></p>
+                        <p>${degree.location || ""}</p>
+                        <p>${degree.description || ""}</p>
+                        <ul>
+                            ${degree.bulletPoints.map(point => `<li>${point}</li>`).join('')}
+                        </ul>
+                    </div>
                 `;
-
-                // Check for bullet points in the summary section
-                if (resume.bulletPoints && resume.bulletPoints.length > 0) {
-                    resumeHTML += `<ul>`;
-                    resume.bulletPoints.forEach(point => {
-                        resumeHTML += `<li class="text-dark">${point}</li>`;
-                    });
-                    resumeHTML += `</ul>`;
-                }
-
-                // Check for degrees in the Education section
-                if (resume.degrees && resume.degrees.length > 0) {
-                    resume.degrees.forEach(degree => {
-                        resumeHTML += `
-                            <div class="mb-3">
-                                <h4 class="text-dark">${degree.subtitle || ""}</h4>
-                                <h6>${degree.date || ""}</h6>
-                                <h6 class="text-muted">${degree.location || ""}</h6>
-                                <p class="text-dark">${degree.description || ""}</p>
-                                <ul>
-                        `;
-
-                        // Include degree bullet points
-                        if (degree.bulletPoints && degree.bulletPoints.length > 0) {
-                            degree.bulletPoints.forEach(point => {
-                                resumeHTML += `<li class="text-dark">${point}</li>`;
-                            });
-                        } else {
-                            resumeHTML += '<li></li>'; // Default message if no bullet points
-                        }
-
-                        resumeHTML += `</ul></div>`;
-                    });
-                }
-
-                // Check if the resume has jobs
-                if (resume.jobs && resume.jobs.length > 0) {
-                    resumeHTML += `<div class="col-lg-12 mb-3 ">`;
-                    resume.jobs.forEach(job => {
-                        resumeHTML += `
-                            <div class="mb-3">
-                                <h4 class="text-dark">${job.jobTitle || ""}</h4>
-                                <h6>${job.company || ""} - ${job.date || ""}</h6>
-                                <h6 class="text-muted">${job.location || ""}</h6>
-                                <ul>
-                        `;
-
-                        // Include job bullet points
-                        if (job.bulletPoints && job.bulletPoints.length > 0) {
-                            job.bulletPoints.forEach(point => {
-                                resumeHTML += `<li class="text-dark">${point}</li>`;
-                            });
-                        } else {
-                            resumeHTML += '<li></li>'; // Default message if no bullet points
-                        }
-
-                        resumeHTML += `</ul></div>`;
-                    });
-                    resumeHTML += `</div>`;
-                }
-
-                // Closing tags for the resume item
-                resumeHTML += `</div></div></div>`;
-
-                // Append to the resume container
-                $("#resume-container").append(resumeHTML);
+                $("#education-container").append(educationHTML);
             });
 
-            // Function to adjust heights of resume items
-            adjustResumeItemHeights();
-
+            // Populate the professional experience section
+            const experience = resume.find(item => item.title === "Professional Experience");
+            experience.jobs.forEach(job => {
+                let experienceHTML = `
+                    <div class="timeline-item">
+                        <h5>${job.jobTitle || ""}</h5>
+                        <p><strong>${job.date || ""}</strong></p>
+                        <p>${job.company || ""}, ${job.location || ""}</p>
+                        <ul>
+                            ${job.bulletPoints.map(point => `<li>${point}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                $("#experience-container").append(experienceHTML);
+            });
         })
         .fail(function () {
             console.error("Failed to load resume data.");
-            $("#resume-container").text("Unable to load resume information at this time.");
+            $("#summary-container").text("Unable to load resume information at this time.");
+            $("#education-container").text("Unable to load resume information at this time.");
+            $("#experience-container").text("Unable to load resume information at this time.");
         });
-
-    // function adjustResumeItemHeights() {
-    //     const items = $('.resume-item'); // Select all resume items
-
-    //     // Calculate max height of items
-    //     let maxHeight = 0;
-    //     items.each(function () {
-    //         const itemHeight = $(this).outerHeight();
-    //         if (itemHeight > maxHeight) {
-    //             maxHeight = itemHeight; // Find the tallest item
-    //         }
-    //     });
-
-    //     // Set each item to the max height
-    //     items.each(function () {
-    //         $(this).css('height', maxHeight + 'px');
-    //     });
-    // }
 });
-
 
 
 async function loadProjects() {

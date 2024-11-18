@@ -9,26 +9,26 @@
                     "HTML",
                     "CSS",
                     "JavaScript",
+                    "Bootstrap",
+                    "PHP",
+                    "Laravel",
+                    "Ajax",
                     "React",
-                    "Node.js",
                     "Python",
-                    "Django",
                     "MySQL",
-                    "MongoDB",
                     "Git",
-                    "AWS",
-                    "Docker"
+                    "Flutter"
+                  
                 ]
             },
             {
                 "title": "Non Technical Skills",
                 "items": [
+                    "Leadership",
+                    "Team Management",
                     "Communication",
                     "Time Management",
-                    "Problem Solving",
-                    "Leadership",
-                    "Teamwork",
-                    "Creativity"
+                    "Problem Solving"
                 ]
             },
             {

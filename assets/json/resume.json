@@ -5,36 +5,44 @@
             "description": "I am a passionate web developer focused on building dynamic, user-centric applications. My journey in web development is driven by a fascination with technology's ability to solve real-world problems. I thrive on challenges and enjoy the process of creating applications that enhance user experiences.",
             "bulletPoints": [
                 "Pokhara, Kaski, Gandaki, Nepal",
-                "+977 9819113548",
+                "+977 9819113548, 9745994819",
                 "timilsinasagar04@gmail.com",
-                "sagartimilsina.com.np"
+                "https://sagartimilsina.com.np/"
             ]
         },
-       
         {
             "title": "Professional Experience",
             "description": "I have gained practical experience through internships and projects.",
             "jobs": [
                 {
-                    "jobTitle": "Web Developer Intern",
-                    "company": "Tech Solutions Ltd.",
-                    "date": "2023/06 - 2023/08",
-                    "location": "Pokhara, Nepal",
+                    "jobTitle": "Junior Web Developer in PHP and Laravel",
+                    "company": "Tuki Soft Pvt. Ltd.",
+                    "date": "2024/02/19 - Present",
+                    "location": "Sundar Marg 9, Pokhara, Nepal",
                     "bulletPoints": [
-                        "Developed web applications using PHP and Laravel.",
-                        "Collaborated with the design team to implement responsive UI.",
-                        "Participated in code reviews and debugging sessions."
+                        "Developed web applications using PHP and Laravel for various sectors, including hotels, government, corporate, consultancy, and CRM.",
+                        "Collaborated with the design team to implement responsive UI, ensuring cross-platform compatibility.",
+                        "Contributed to the development of a Learning Management System (LMS), enhancing e-learning experiences.",
+                        "Integrated external APIs such as Bunny Net for video streaming and Stripe for payment gateways.",
+                        "Worked on Zoom API integration for communication features within the web applications.",
+                        "Participated in code reviews and debugging sessions, ensuring code quality and adherence to best practices.",
+                        "Worked closely with cross-functional teams to deliver projects on time while maintaining client satisfaction.",
+                        "Guided interns through coding best practices, emphasizing clean, efficient, and secure code.",
+                        "Provided QA testing support, ensuring bug-free applications by identifying issues and implementing fixes in collaboration with the testing team.",
+                        "Assisted in creating and reviewing security audit reports for government websites, ensuring compliance with security standards and identifying vulnerabilities."
                     ]
                 },
                 {
-                    "jobTitle": "Freelance Web Developer",
-                    "company": "Self-employed",
-                    "date": "2022/01 - Present",
-                    "location": "Remote",
+                    "jobTitle": "Full Stack Web Developer in PHP Laravel (Intern)",
+                    "company": "XDezo Academy",
+                    "date": "July 2023 - Jan 2024",
+                    "location": "XDezo Technology, Ratna Chowk, Pokhara-7, Pokhara 33700, Nepal",
                     "bulletPoints": [
-                        "Designed and developed custom websites for local businesses.",
-                        "Utilized JavaScript and AJAX for interactive features.",
-                        "Managed project timelines and client communications."
+                        "Collaborated with a team of four developers to design and develop custom websites.",
+                        "Worked on three major projects, contributing to both frontend and backend development.",
+                        "Developed responsive UI using HTML, CSS, and JavaScript, ensuring user-friendly interfaces.",
+                        "Utilized PHP and Laravel for backend development, building efficient and scalable web applications.",
+                        "Participated in code competitions and  workshops, ensuring code quality and adherence to best practices."
                     ]
                 }
             ]
@@ -44,31 +52,26 @@
             "degrees": [
                 {
                     "subtitle": "Bachelor in Computer Science and Information Technology (B.Sc.CSIT)",
-                    "description": "Currently pursuing a Bachelor's degree focusing on software development and web technologies.",
-                    "date": "2021/04/04 - Present",
-                    "location": "Pokhara, Kaski, Gandaki, Nepal",
-                    "bulletPoints": [
-                        "Gained foundational knowledge in programming languages such as Java, C++, and Python.",
-                        "Developed skills in web development using PHP, Laravel, HTML, CSS, and JavaScript.",
-                        "Participated in various projects that emphasized teamwork and problem-solving.",
-                        "Engaged in workshops and seminars to stay updated on industry trends and technologies."
-                    ]
+                    "description": "Currently pursuing a Bachelor's degree in B.Sc. CSIT at Prithvi Narayan Campus",
+                    "date": "April 2021 - Present",
+                    "location": "Bagar 1, Pokhara, Kaski, Gandaki, Nepal",
+                    "bulletPoints": []
                 },
                 {
-                    "subtitle": "High School Diploma",
+                    "subtitle": "+2 in Science (SLC)",
                     "description": "Completed my high school education with a strong focus on science and mathematics.",
-                    "date": "2018/04/01 - 2021/04/01",
+                    "date": "August 2017 - July 2019",
                     "location": "Pokhara, Kaski, Gandaki, Nepal",
                     "bulletPoints": [
                         "Achieved excellent grades in science and mathematics subjects.",
-                        "Participated in extracurricular activities, including coding clubs and science fairs.",
+                        "Participated in extracurricular activities.",
                         "Developed critical thinking and analytical skills through various projects."
                     ]
                 },
                 {
-                    "subtitle": "SLC",
-                    "description": "Completed my Secondary Level Education.",
-                    "date": "2016/04/01 - 2018/04/01",
+                    "subtitle": "SEE",
+                    "description": "Completed my Secondary Education Examination (SEE).",
+                    "date": "April 2004 - July 2017",
                     "location": "Pokhara, Kaski, Gandaki, Nepal",
                     "bulletPoints": [
                         "Achieved excellent grades in all subjects.",

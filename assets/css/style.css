@@ -227,8 +227,6 @@
     padding-left: 10px;
     position: relative;
     margin-left: 10px;
-
-
 }
 
 .progress-bar {
@@ -262,6 +260,25 @@
     left: 0;
     right: 0;
     padding: 10px;
+}
+
+.timeline {
+    border-left: 3px solid #FF6347;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -0.6rem;
+    top: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #fff;
+    border: 3px solid #FF6347;
+    border-radius: 50%;
 }
 
 .btn-color {
@@ -342,6 +359,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .section {
     height: 100vh;
