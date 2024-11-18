@@ -20,11 +20,16 @@
                     "date": "2024/02/19 - Present",
                     "location": "Sundar Marg 9, Pokhara, Nepal",
                     "bulletPoints": [
-                        "Developed web applications using PHP and Laravel for various sectors, including government, corporate, and CRM systems.",
-                        "Collaborated with design teams to implement responsive UI and integrated external APIs such as Bunny Net, Stripe, and Zoom.",
-                        "Contributed to the development of a Learning Management System (LMS) to enhance e-learning experiences.",
-                        "Guided interns on coding best practices and provided QA support, ensuring bug-free applications.",
-                        "Assisted in creating security audit reports for government websites, ensuring compliance with security standards."
+                        "Developed web applications using PHP and Laravel for various sectors, including hotels, government, corporate, consultancy, and CRM.",
+                        "Collaborated with the design team to implement responsive UI, ensuring cross-platform compatibility.",
+                        "Contributed to the development of a Learning Management System (LMS), enhancing e-learning experiences.",
+                        "Integrated external APIs such as Bunny Net for video streaming and Stripe for payment gateways.",
+                        "Worked on Zoom API integration for communication features within the web applications.",
+                        "Participated in code reviews and debugging sessions, ensuring code quality and adherence to best practices.",
+                        "Worked closely with cross-functional teams to deliver projects on time while maintaining client satisfaction.",
+                        "Guided interns through coding best practices, emphasizing clean, efficient, and secure code.",
+                        "Provided QA testing support, ensuring bug-free applications by identifying issues and implementing fixes in collaboration with the testing team.",
+                        "Assisted in creating and reviewing security audit reports for government websites, ensuring compliance with security standards and identifying vulnerabilities."
                     ]
                 },
                 {
@@ -46,11 +51,14 @@
                     "date": "2022 - 2024",
                     "location": "Pokhara, Nepal",
                     "bulletPoints": [
-                        "Served as College Representative (CR) and Operations Lead at Code for Change Pokhara, driving community engagement and event execution.",
-                        "Assisted in member recruitment, onboarding, and fostering student involvement in various initiatives.",
-                        "Planned, coordinated, and executed major events, workshops, and initiatives while ensuring cross-functional team collaboration.",
-                        "Managed event logistics, registrations, and outreach, ensuring smooth execution and evaluating outcomes.",
-                        "Contributed to reports and feedback collection, improving operations and aligning projects with the organization's goals."
+                        "Served as College Representative (CR) for Code for Change Pokhara (2022-2023), helping with community engagement, event organization, and communication between the organization and  students.",
+                        "Assisted in the recruitment of new members and facilitated onboarding and orientation for newcomers.",
+                        "Organized and participated in events, ensuring smooth execution and fostering student involvement.",
+                        "Transitioned to Operations Lead (2023-2024), overseeing the planning and execution of major events, workshops, and initiatives.",
+                        "Coordinated cross-functional teams to ensure timely project delivery while maintaining high-quality standards.",
+                        "Led communication efforts across teams, ensuring alignment with the organization's mission and objectives.",
+                        "Managed logistics and resources for events, including managing registrations, ensuring effective outreach, and evaluating event outcomes.",
+                        "Contributed to reports, documentation, and feedback collection to improve future operations and events."
                     ]
                 }
             ]
