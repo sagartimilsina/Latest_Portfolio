@@ -1,26 +1,56 @@
 [
     {
-        "title": "Project 1",
-        "description": "Description for project 1.",
-        "image": "/assets/images/photo.jpeg",
+        "title": "Grow",
+        "description": "A platform for learning where admins add teachers, assign courses, and allow students to enroll and download notes.",
+        "image": "/assets/images/grow.ico",
         "link": "#"
     },
     {
-        "title": "Project 2",
-        "description": "Description for project 2.",
-        "image": "/assets/images/photo.jpeg",
+        "title": "Attendance Management System",
+        "description": "A system to manage attendance, register companies, add employees, assign roles, and generate attendance reports.",
+        "image": "/assets/images/attendance Management System.png",
         "link": "#"
     },
     {
-        "title": "Project 3",
-        "description": "Description for project 3.",
-        "image": "/assets/images/photo.jpeg",
+        "title": "Restaurant Management System",
+        "description": "Software for managing restaurants, handling orders, payments, and tracking deliveries.",
+        "image": "/assets/images/bhansha.jpeg",
         "link": "#"
     },
     {
-        "title": "Project 4",
-        "description": "Description for project 4.",
-        "image": "/assets/images/photo.jpeg",
-        "link": "#"
+        "title": "Smart Gauplaika, भिमसेनथापा गाउँपालिका",
+        "description": "A digital solution for Bhimsen Thapa Rural Municipality to streamline operations.",
+        "image": "/assets/images/Smartgaupalika.jpg",
+        "link": "https://smartpalikabhimsenthapa.com/"
+    },
+    {
+        "title": "Pokhara Apartments",
+        "description": "A platform showcasing apartment listings and services in Pokhara.",
+        "image": "/assets/images/pokhara appartment.png",
+        "link": "https://pokharaapartment.com/"
+    },
+    {
+        "title": "Gyanpunj Corporate Training",
+        "description": "A platform offering corporate training and development programs for organizations.",
+        "image": "/assets/images/gyanpunj.png",
+        "link": "https://gyanpunj.com.np//"
+    },
+    {
+        "title": "Enpred Nepal Organization",
+        "description": "A platform for community development and sustainable projects in Nepal.",
+        "image": "/assets/images/enpred.jpg",
+        "link": "https://enprednepal.org.np/"
+    },
+    {
+        "title": "Mobile Magic",
+        "description": "An Australian service specializing in mobile solutions, accessories, and repairs.",
+        "image": "/assets/images/mobilemagic.png",
+        "link": "https://mobilemagic.au/"
+    },
+    {
+        "title": "Bookkeeping and Accounting",
+        "description": "A platform offering professional bookkeeping and accounting services.",
+        "image": "/assets/images/bookkeeping.jpg",
+        "link": "https://mobilemagic.au/"
     }
 ]
