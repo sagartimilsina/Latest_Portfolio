@@ -244,7 +244,7 @@ async function loadProjects() {
                     <div class="portfolio-item">
                         <div class="card shadow">
                             <div class="image">
-                                <img class="card-img-top img-fluid" src="${project.image}" alt="${project.title}" height="500" width="auto" />
+                                <img class="card-img-top  p-1" src="${project.image}" alt="${project.title}" height="auto" width="auto" style="object-fit:cover" />
                                 
                             </div>
                             <div class="card-body">
