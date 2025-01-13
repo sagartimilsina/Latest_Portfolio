@@ -24,6 +24,18 @@
         "link": "https://smartpalikabhimsenthapa.com/"
     },
     {
+        "title": "Enpred Nepal Organization",
+        "description": "A platform for community development and sustainable projects in Nepal.",
+        "image": "/assets/images/enpred.jpg",
+        "link": "https://enprednepal.org.np/"
+    },
+    {
+        "title": "Bookkeeping and Accounting",
+        "description": "A platform offering professional bookkeeping and accounting services.",
+        "image": "/assets/images/bookkeeping.jpg",
+        "link": "https://mobilemagic.au/"
+    },
+    {
         "title": "Pokhara Apartments",
         "description": "A platform showcasing apartment listings and services in Pokhara.",
         "image": "/assets/images/pokhara appartment.png",
@@ -36,21 +48,9 @@
         "link": "https://gyanpunj.com.np//"
     },
     {
-        "title": "Enpred Nepal Organization",
-        "description": "A platform for community development and sustainable projects in Nepal.",
-        "image": "/assets/images/enpred.jpg",
-        "link": "https://enprednepal.org.np/"
-    },
-    {
         "title": "Mobile Magic",
         "description": "An Australian service specializing in mobile solutions, accessories, and repairs.",
         "image": "/assets/images/mobilemagic.png",
-        "link": "https://mobilemagic.au/"
-    },
-    {
-        "title": "Bookkeeping and Accounting",
-        "description": "A platform offering professional bookkeeping and accounting services.",
-        "image": "/assets/images/bookkeeping.jpg",
         "link": "https://mobilemagic.au/"
     }
 ]

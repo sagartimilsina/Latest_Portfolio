@@ -240,13 +240,12 @@ async function loadProjects() {
         projects.forEach(project => {
             const projectElement = `
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 p-3">
+                <a href="${project.link}" class="">
                     <div class="portfolio-item">
                         <div class="card shadow">
                             <div class="image">
-                                <img class="card-img-top img-fluid" src="${project.image}" alt="${project.title}" height="200px" width="auto" />
-                                <div class="overlay">
-                                    <a href="${project.link}" class="view-link text-white"><i class="fa fa-link" aria-hidden="true"></i></a>
-                                </div>
+                                <img class="card-img-top img-fluid" src="${project.image}" alt="${project.title}" height="500" width="auto" />
+                                
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title">${project.title}</h4>
@@ -254,6 +253,7 @@ async function loadProjects() {
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
             `;
             portfolioItemsContainer.innerHTML += projectElement; // Add the project element to the container
