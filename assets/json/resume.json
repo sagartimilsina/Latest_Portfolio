@@ -10,14 +10,28 @@
                 "https://sagartimilsina.com.np/"
             ]
         },
+      
         {
             "title": "Professional Experience",
             "description": "I have gained practical experience through internships and projects.",
             "jobs": [
                 {
+                    "jobTitle": "Senior Full Stack Web Developer",
+                    "company": "XAV Technology",
+                    "date": "February 2025 - Present",
+                    "location": "Pokhara, Nepal",
+                    "bulletPoints": [
+                        "Leading the development of scalable web applications using modern technologies.",
+                        "Overseeing system architecture and implementing best coding practices to ensure maintainability.",
+                        "Collaborating with cross-functional teams, including UI/UX designers, backend developers, and project managers.",
+                        "Mentoring junior developers, conducting code reviews, and optimizing application performance.",
+                        "Integrating third-party APIs, security enhancements, and database optimizations for efficient system operations."
+                    ]
+                },
+                {
                     "jobTitle": " Web Developer in PHP and Laravel",
                     "company": "Tuki Soft Pvt. Ltd.",
-                    "date": "2024/02/19 - Present",
+                    "date": "2024/02/19 - 2025/02/26",
                     "location": "Sundar Marg 9, Pokhara, Nepal",
                     "bulletPoints": [
                         "Developed web applications using PHP and Laravel for various sectors, including government, corporate, and CRM systems.",
